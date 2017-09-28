@@ -1,0 +1,30 @@
+<div class="container">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Username</label>
+            <div class="col-sm-10">
+                <input type="text" ng-model="username" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Password</label>
+            <div class="col-sm-10">
+                <input type="password" ng-model="password" class="form-control">
+            </div>
+        </div>
+        
+        <div class="alert alert-danger" role="alert" ng-show="showError">{{errorMsg}}</div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" ng-click="login()" class="btn btn-success">Sign in</button>
+                <!--onclick will search entire (window) scope, where register is not defined
+            ng-click search angular scope, where register is defined-->
+                <button type="button" ng-click="register()" class="btn btn-primary">Sign up</button>
+            </div>
+        </div>
+        <!--<button type="button" ng-click="login()">login</button>
+        
+        <button type="button" ng-click="register()">sign up</button>-->
+
+    </form>
+</div>

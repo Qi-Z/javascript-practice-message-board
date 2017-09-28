@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Messages</h1>
+    <a href="#/" class="btn btn-default">Home</a>
+    <a href="#/sendmessage" class="btn btn-default">Compose</a>
+    <div class="row">
+        <!--By default, ng-repeat won't allow duplicates. Unless you use track by.-->
+        <div ng-repeat="message in messages track by $index" class="col-sm-12">
+            <div class="row message-block">
+                <div class="col-sm-4 message-block-title"><span ng-if="message.isImportant" style="color:#FFC000" class="glyphicon glyphicon-star"></span>{{message.title}}</div>
+                <div class="col-sm-3 message-block-date" >{{message.dateCreated | date:'medium'}}</div>
+                <div class="col-sm-5"> <span ng-click="showDetail($index)" class="btn-sm btn btn-info">view</span>/
+                    <span ng-click="delete($index)" class="btn-sm btn btn-danger">delete</span>/
+                        <span ng-click="toggleImportant($index)" class="btn-sm btn btn-success">{{message.isImportant?"Not Important":"Important"}}</span></div>
+                <div class="col-sm-12 message-block-description" ng-if="msgStatus[$index]">
+                    <h4>From: {{message.from}}</h4>
+                    <p>{{message.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Test custom directive-->
+    <message-card></message-card>
+</div>

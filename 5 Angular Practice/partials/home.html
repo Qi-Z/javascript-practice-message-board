@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Welcome, {{user.firstname}} {{user.lastname}}</h1>
+    <div class="row">
+        <div ng-click="goToProfile()" class="col-xs-6 btn btn-default">Profile</div>
+        <div ng-click="goToMessages()" class="col-xs-6 btn btn-default">Message</div>
+        <!--TODO: use ng-click to implement logout feature-->
+        
+    </div>
+    <div class="row">
+        <a ng-click="logout()" class="btn btn-warning">Logout</a>
+    </div>
+    
+    
+    
+
+</div>

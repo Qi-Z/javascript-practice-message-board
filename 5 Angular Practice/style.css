@@ -1,0 +1,21 @@
+.message-block {
+    margin:10px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px lightblue solid;
+}
+
+.message-block-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.message-block-date {
+    color:gray;
+}
+
+.message-block-description {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightsteelblue;
+}

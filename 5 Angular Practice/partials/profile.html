@@ -1,0 +1,87 @@
+<!--<div>-->
+    
+<div class="container">
+    <a href="#/" class="btn btn-default">Home</a>
+    <h2>User: {{user.username}}</h2>
+    <form class="form-horizontal" ng-submit="update()">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Password</label>
+            <div class="col-sm-10">
+                <input type="password" placeholder="password" ng-model="user.password" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" placeholder="First Name" ng-model="user.firstname" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" placeholder="Last Name" ng-model="user.lastname" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Gender</label>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="radio col-sm-2">
+                        <label>
+                        <input type="radio" value="male" ng-model="user.gender">
+                        male
+                    </label>
+                    </div>
+                    <div class="radio col-sm-2">
+                        <label>
+                        <input type="radio" value="female" ng-model="user.gender">
+                        female
+                    </label>
+                    </div>
+                </div></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Email</label>
+            <div class="col-sm-10">
+                <input type="email" placeholder="Email" ng-model="user.email" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Location</label>
+            <div class="col-sm-10">
+                <input type="text" placeholder="Location" ng-model="user.location" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Phone</label>
+            <div class="col-sm-10">
+                <input type="text" placeholder="Phone" ng-model="user.phone" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+            
+        </div>
+        
+    </form>
+    <div class="alert alert-success" role="alert" ng-show="updateSuccess">Profile Updated</div>
+    <div class="alert alert-warning" role="alert" ng-show="showError">Profile failed to update</div>
+</div>
+<!--
+
+
+
+    <form>
+        <input type="text" placeholder="username" ng-model="user.username">
+        <input type="password" placeholder="password" ng-model="user.password">
+        <input type="text" placeholder="First Name" ng-model="user.firstname">
+        <input type="text" placeholder="Last Name" ng-model="user.lastname">
+        <input type="text" placeholder="Gender" ng-model="user.gender">
+        <input type="text" placeholder="Location" ng-model="user.location">
+        <input type="text" placeholder="Email" ng-model="user.email">
+        <input type="text" placeholder="Phone" ng-model="user.phone">
+        <button type="button" ng-click="update()">Update</button>
+    </form>
+</div>-->
